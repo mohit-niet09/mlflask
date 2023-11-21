@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>ML API</title>
+  </head>
+  <body>
+    <div class="login">
+      <h1>Buy Predictor: From Social Media</h1>
+      <form action="{{url_for('predict')}}" method="post">
+        <input
+          type="text"
+          name="salary"
+          placeholder="Salary"
+          required="required"
+        />
+        <input type="text" name="age" placeholder="Age" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+        <br />
+        <br />
+        {{prediction_text}}
+      </form>
+    </div>
+  </body>
+</html>
